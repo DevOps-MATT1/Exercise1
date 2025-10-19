@@ -2,7 +2,11 @@
 name: 01-BuildingBlock
 
 # ON - this is trigger
-on: push
+# on: push
+
+on:
+  # It will allows you to manually run a workflow from the GitHub website, API, or CLI.
+  workflow_dispatch:
 
 jobs:
   
