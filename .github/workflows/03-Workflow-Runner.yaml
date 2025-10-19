@@ -1,0 +1,44 @@
+# This is the workflow name
+name: 03-Workflow-Runner
+
+# ON - this is trigger
+on:
+  # It will allows you to manually run a workflow from the GitHub website, API, or CLI.
+  workflow_dispatch:
+
+jobs:
+  
+  echo-ubuntu:  
+    # To define the type of machine to run the job on.    
+    runs-on: ubuntu-latest
+    
+    # A job contains a sequence of tasks is called steps
+    steps:
+        - name: Show OS
+          run: |
+            echo "This job is on Ubuntu runner"
+            echo "Runner OS: $RUNNER_OS"
+
+  echo-windows:  
+      # To define the type of machine to run the job on.    
+      runs-on: windows-latest
+      
+      # A job contains a sequence of tasks is called steps
+      steps:
+        - name: Show OS
+          shell: bash
+          run: |
+            echo "This job is running on Windows runner"
+            echo "Runner OS: $RUNNER_OS"
+
+  echo-macos:  
+    # To define the type of machine to run the job on.    
+    runs-on: macos-latest
+    
+    # A job contains a sequence of tasks is called steps
+    steps:
+        - name: Show OS
+          run: |
+            echo "This job is on MAC OS runner"
+            echo "Runner OS: $RUNNER_OS"
+  
