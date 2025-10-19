@@ -2,14 +2,27 @@
 name: 02-Workflow-Events
 
 # ON - this is trigger
-on: push
+on:
+  # Trigger on PUSH and PULL_REQUEST (multiple trigger) 
+  push:
+  pull_request:
+
+  #CRON job auto schedule
+  schedule:
+    - cron: '*/1 * * * *'
+  
+  # It will allows you to manually run a workflow from the GitHub website, API, or CLI.
+  workflow_displatch:
+  
 
 jobs:
   
   echo-hello:
     # To define the type of machine to run the job on.
+    
     runs-on: ubuntu-latest
     #A job contains a sequence of tasks is called steps
+   
     steps:
         - name: Show the trigger
           run: echo "I've been trigger by a(n) ${{github.event_name}}"
