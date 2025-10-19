@@ -14,7 +14,9 @@ jobs:
     
     # A job contains a sequence of tasks is called steps
     steps:
-        - name: Show OS
-          run: |
-            echo "This job is on Ubuntu runner"
-            echo "Runner OS: $RUNNER_OS"
+        - name: Checkout Code
+        # Action - Custom Application to perform complex, freqent repeating task
+          uses: actions/checkout@v4
+
+        - name: Printing Folders
+          run: ls
