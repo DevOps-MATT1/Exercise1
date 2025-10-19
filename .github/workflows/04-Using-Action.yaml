@@ -23,11 +23,8 @@ jobs:
         # Action - Custom Application to perform complex, freqent repeating task
           uses: actions/checkout@v4
 
-        - name: Printing Folders
-          run: ls
-
         - name: Setup Node
-          uses: action/setup-node@v3
+          uses: actions/setup-node@v3
           with:
             node-version: '20.x'
 
