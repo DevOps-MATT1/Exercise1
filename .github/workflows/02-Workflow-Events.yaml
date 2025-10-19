@@ -12,7 +12,7 @@ on:
     - cron: '*/1 * * * *'
   
   # It will allows you to manually run a workflow from the GitHub website, API, or CLI.
-  workflow_displatch:
+  workflow_dispatch:
   
 
 jobs:
