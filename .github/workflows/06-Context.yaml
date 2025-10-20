@@ -1,0 +1,45 @@
+# This is the workflow name
+name: 06-Context
+
+#displayname of the job
+run-name: 06-Context | DEBUG - ${{input.debug}}
+
+# ON - this is trigger
+on:
+    push:
+    workflow_dispatch:
+        input:
+            debug:
+                type: boolean
+                default: false
+
+jobs:
+  
+  echo-hello:
+    # To define the type of machine to run the job on.
+    runs-on: ubuntu-latest
+    #A job contains a sequence of tasks is called steps
+    steps:
+        - name: SDisplay Information
+          run: |
+          echo "Event name: ${{github.event_name}}"
+          echo "Ref: ${{github.Ref}}"
+          echo "SHA: ${{github.SHA}}"
+          echo "Actor: ${{github.Actor}}"
+          echo "Workflow:${{github.workflow}}"
+          echo "Run ID: ${{github.run_id}}"
+          echo "Run number: ${{github.run_number}}"
+
+        - name: Retrieve Variable
+            run: echo "Variable value: ${{vars.MY_VAR}}"
+        
+
+
+
+
+
+
+
+
+
+
