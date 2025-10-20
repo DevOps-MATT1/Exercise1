@@ -5,9 +5,11 @@ name: 05-1-Filters-Activity-Types
 on:
   # It will allows you to manually run a workflow from the GitHub website, API, or CLI.
   pull_request:
-    type:[opened, synchronize]
+    type:
+        - opened
+        - synchronize
     branches:
-        main
+        - main
 
 jobs:
   
