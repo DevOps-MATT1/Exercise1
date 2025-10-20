@@ -2,7 +2,7 @@
 name: 06-Context
 
 #displayname of the job
-run-name: 06-Context | DEBUG - ${{input.debug}}
+run-name: 06-Context | DEBUG - ${{inputs.debug}}
 
 # ON - this is trigger
 on:
