@@ -1,5 +1,5 @@
 # This is the workflow name
-name: 05-1-Filters-Activity-Types
+name: 05-2-Filters-Activity-Types
 
 # ON - this is trigger
 on:
