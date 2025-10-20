@@ -1,0 +1,22 @@
+# This is the workflow name
+name: 05-1-Filters-Activity-Types
+
+# ON - this is trigger
+on:
+  # It will allows you to manually run a workflow from the GitHub website, API, or CLI.
+  pull_request:
+    type:
+      - closed
+    branches:
+        - main
+
+jobs:
+  
+  Filter-test:  
+    # To define the type of machine to run the job on.    
+    runs-on: ubuntu-latest
+    steps:
+        - name: Pull Request Filter
+          run: echo "Running whenever a PR is closed."
+
+
