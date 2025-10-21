@@ -10,10 +10,22 @@ on:
                 type: boolean
                 default: false
 
+#Setup Environment Variable
+env:
+    MY_WORKFLOW_VAR: "workflow var1"
+    MY_OVERWRITTEN_VAR: "Workflow Overwritten Var2"
+
 jobs:  
   echo-hello:
     # To define the type of machine to run the job on.
     runs-on: ubuntu-latest
+
+    #Setup Job-Level Environment Variable
+    env:
+        MY_Job_VAR: "Job Var1"
+        MY_OVERWRITTEN_VAR: "Job Overwritten Var2"
+
+    
     #A job contains a sequence of tasks is called steps
     steps:
         - name: Display Information
@@ -29,7 +41,27 @@ jobs:
         - name: Retrieve Variable
           run: |
               echo "Variable value: ${{vars.MY_VAR}}"
-        
+
+        - name: Print Env Variables
+          #Setup STEP-Level Environment Variable
+          env:
+              MY_OVERWRITTEN_VAR: 'step'
+          run: |
+          echo "Workflow env: ${{ env.MY_WORKFLOW_VAR }}"
+          echo "Overwritten env: ${{ env.MY_OVERWRITTEN_VAR }}"
+      
+        - name: Print Env Variables2
+          run: |
+          echo "Workflow env: ${{ env.MY_WORKFLOW_VAR }}"
+          echo "Overwritten env: ${{ env.MY_OVERWRITTEN_VAR }}"
+
+  echo-data2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Env Variables
+        run: |
+          echo "Workflow env: $MY_WORKFLOW_VAR"
+          echo "Overwritten env: $MY_OVERWRITTEN_VAR"
 
 
 
