@@ -39,6 +39,7 @@ jobs:
               echo "Run number: ${{github.run_number}}"
 
         - name: Retrieve Variable
+          #This is System-Level Variable
           run: |
               echo "Variable value: ${{vars.MY_VAR}}"
 
