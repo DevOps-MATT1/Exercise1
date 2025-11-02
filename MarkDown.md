@@ -98,16 +98,7 @@ This site was built using [GitHub Pages](https://pages.github.com/)
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
 
 ---
-# 10. FootNote in MD
-
-Here is a simple footnote[^1].
-A footnote can also have multiple lines[^2].
-
-[^1]: My reference.
-[^2]: To add line breaks within a footnote, prefix new lines with 2 spaces.
-  This is a second line.
-
-# 11. Table in MD
+# 10. Table in MD
 | Movie | Release Date |
 |-------|-------------|
 | Iron Man | May 2, 2008 |
@@ -116,3 +107,16 @@ A footnote can also have multiple lines[^2].
 | Thor | May 6, 2011 |
 | Captain America: The First Avenger | July 22, 2011 |
 | Marvel's The Avengers | May 4, 2012 |
+
+---
+
+# 11. FootNote in MD
+
+Here is a simple footnote[^1].
+A footnote can also have multiple lines[^2].
+
+[^1]: My reference.
+[^2]: To add line breaks within a footnote, prefix new lines with 2 spaces.
+  This is a second line.
+
+
